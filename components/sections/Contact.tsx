@@ -44,8 +44,8 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/subbukp', icon: faGithub, color: 'hover:text-gray-900 dark:hover:text-white' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/subrahmanya-k-p-964733184/', icon: faLinkedin, color: 'hover:text-blue-600 dark:hover:text-blue-400' },
+    { name: 'GitHub', url: 'https://github.com/subrahmanya-kp', icon: faGithub, color: 'hover:text-gray-900 dark:hover:text-white' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/subrahmanya-kp/', icon: faLinkedin, color: 'hover:text-blue-600 dark:hover:text-blue-400' },
     { name: 'Twitter', url: 'https://x.com/subrahmanya11', icon: faTwitter, color: 'hover:text-sky-500 dark:hover:text-sky-400' },
   ];
 

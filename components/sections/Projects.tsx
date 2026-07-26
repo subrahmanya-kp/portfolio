@@ -5,13 +5,14 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 // Font Awesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
+import {
   faBone,
-  faXRay, 
+  faXRay,
   faBrain,
   faUpload,
   faDigitalTachograph,
-  faTrafficLight
+  faTrafficLight,
+  faChartLine
 } from '@fortawesome/free-solid-svg-icons';
 
 interface ProjectLink {
@@ -34,6 +35,26 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    icon: faChartLine,
+    iconColor: "text-emerald-600 dark:text-emerald-400",
+    name: "Market Notifier",
+    company: "Personal Project",
+    stack: ["Python", "FastAPI", "MCP", "Nginx", "Raspberry Pi", "APScheduler", "Telegram API"],
+    problem: "Needed a self-hosted tool to aggregate real-time market data from multiple sources and deliver automated daily reports — without relying on third-party subscriptions.",
+    actions: [
+      "Built a Python/FastAPI application aggregating real-time market data (equities, IPOs, bonds, precious metals, global sentiment indices) from 7+ sources",
+      "Exposed a Model Context Protocol (MCP) server alongside the REST API, enabling AI assistants to query live market data directly via MCP tools",
+      "Set up automated daily reports delivered via Telegram and Email",
+      "Deployed on a self-managed Raspberry Pi with Nginx as reverse proxy and ngrok tunnel for external access",
+      "Implemented APScheduler for cron-based scheduling and a custom health-check/heartbeat system for uptime monitoring"
+    ],
+    outcomes: [
+      "Fully self-hosted with zero third-party subscription cost",
+      "AI assistants can query live market data (mood index, investable bonds) via MCP tools",
+      "Automated daily reports across 7+ data sources with custom health monitoring"
+    ]
+  },
   {
     icon: faBone,
     iconColor: "text-red-600 dark:text-red-400",
@@ -235,7 +256,16 @@ export default function Projects() {
 
           {/* Projects Grid */}
           <div className="grid gap-8 md:grid-cols-2">
-            {(showAllProjects ? projects : projects.slice(0, 4)).map((project, idx) => (
+            {(showAllProjects ? projects : projects.slice(0, 4)).map((project, idx) => {
+              console.log(`Rendering project ${idx}:`, project.name, project);
+              // Check if it's a TCS project
+              if (project.company?.includes('TCS')) {
+                console.log('TCS Project found:', project);
+                console.log('Stack:', project.stack);
+                console.log('Actions:', project.actions);
+                console.log('Outcomes:', project.outcomes);
+              }
+              return (
               <motion.div
                 key={project.name}
                 variants={itemVariants}
@@ -261,6 +291,7 @@ export default function Projects() {
                   </div>
 
                   {/* Tech Stack */}
+                  {project.stack && project.stack.length > 0 && (
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
                       🔧 Stack
@@ -276,6 +307,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
+                  )}
 
                   {/* Problem Statement */}
                   <div>
@@ -358,7 +390,8 @@ export default function Projects() {
                   )}
                 </div>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
           
           {projects.length > 4 && (
@@ -385,19 +418,19 @@ export default function Projects() {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">🛠️ Tools & Technologies</h4>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">🛠️ Tools & Practices</h4>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li>• Gained hands-on experience with Cursor, Claude Code, LightLLM, Make.com, and MCP</li>
-                  <li>• Remote system management using Teleport, Endpoint Central, and Countly</li>
+                  <li>• Security scanning: SonarQube, Snyk, OWASP Dependency Check</li>
+                  <li>• Remote system management via Teleport and Ansible automation</li>
                   <li>• Proficient in Agile-Scrum methodologies and Jira-based project tracking</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">🚀 Key Achievements</h4>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">🚀 Key Highlights</h4>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                  <li>• Designed Django-based automation for recurring internal requests</li>
-                  <li>• Developed and maintained multiple REST APIs for integration pipelines</li>
-                  <li>• Delivered 24/7 client support through rotational shifts and weekend availability</li>
+                  <li>• Shipped production systems end-to-end: auth, payments, and AI orchestration</li>
+                  <li>• LeetCode: <a href="https://leetcode.com/u/subrahmanya_kp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">subrahmanya_kp</a></li>
+                  <li>• Personal site: <a href="https://whoissubbu.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">whoissubbu.vercel.app</a></li>
                 </ul>
               </div>
             </div>
