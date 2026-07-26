@@ -7,8 +7,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/subbukp', icon: '📦' },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/subrahmanya-k-p-964733184/', icon: '💼' },
+    { name: 'GitHub', href: 'https://github.com/subrahmanya-kp', icon: '📦' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/subrahmanya-kp/', icon: '💼' },
     { name: 'Twitter', href: 'https://x.com/subrahmanya11', icon: '🐦' },
   ];
 

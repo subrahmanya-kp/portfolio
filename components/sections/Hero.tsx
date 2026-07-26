@@ -100,7 +100,7 @@ export default function Hero() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
               Subrahmanya K P
               <span className="block text-blue-600 dark:text-blue-400 text-2xl sm:text-3xl md:text-4xl mt-2">
-                Site Reliability Engineer
+                Software Development Engineer
               </span>
             </h1>
           </motion.div>
@@ -109,7 +109,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-lg"
           >
-            Bridging development and operations with a focus on building robust systems, automating workflows, and ensuring reliability at scale.
+            Backend Software Engineer with 5 years of experience spanning SRE and SDE roles, specializing in API design, system architecture, and PostgreSQL-backed multi-tenant platforms.
           </motion.p>
 
           <motion.div
@@ -168,11 +168,11 @@ export default function Hero() {
             <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Core Expertise</h3>
             <div className="flex flex-wrap gap-2">
               {[
-                "Cloud Platforms (AWS/Azure)",
+                "API Design & System Architecture",
+                "PostgreSQL & Multi-tenant Platforms",
+                "Django & FastAPI",
+                "LLM Agent Orchestration (MCP)",
                 "Kubernetes & Docker",
-                "CI/CD Automation",
-                "Infrastructure as Code",
-                "DevOps Tools",
                 "Monitoring & Observability"
               ].map((skill, index) => (
                 <span

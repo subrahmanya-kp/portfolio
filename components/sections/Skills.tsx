@@ -24,53 +24,43 @@ const Skills = () => {
   const skillCategories = [
     {
       name: 'Languages & Frameworks',
-      skills: ['Python', 'Django', 'C#', '.NET', 'C++', "Next.js", "REST API"],
+      skills: ['Python', 'C', 'C++', 'SQL', 'Django', 'Django Allauth', 'FastAPI', 'REST API'],
       icon: <CodeBracketIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     },
     {
-      name: 'CI/CD & Deployment',
-      skills: ['Jenkins', 'Azure DevOps', 'AWS DevOps', 'Maven', 'GitLab CI', 'GitHub Actions'],
+      name: 'AI / LLM',
+      skills: ['Model Context Protocol (MCP)', 'LLM Agent Orchestration'],
+      icon: <DocumentTextIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    },
+    {
+      name: 'Databases & Storage',
+      skills: ['PostgreSQL', 'Supabase', 'MySQL', 'Redis'],
+      icon: <CircleStackIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    },
+    {
+      name: 'Cloud & Infrastructure',
+      skills: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Helm', 'Nginx', 'Keycloak', 'Ansible'],
+      icon: <CloudIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    },
+    {
+      name: 'Observability & Testing',
+      skills: ['Datadog', 'Grafana', 'Locust', 'Distributed Tracing'],
+      icon: <ShieldCheckIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
+    },
+    {
+      name: 'CI/CD & DevOps',
+      skills: ['Jenkins', 'Git', 'SonarQube', 'Snyk', 'OWASP Dependency Check', 'JIRA', 'Teleport'],
       icon: <ArrowPathIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     },
     {
       name: 'Container & Orchestration',
-      skills: ['Docker', 'Kubernetes', 'AKS', 'EKS', 'Helm', 'Docker Compose'],
+      skills: ['Docker', 'Kubernetes', 'Helm', 'Docker Compose'],
       icon: <ServerIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     },
     {
-      name: 'Infrastructure as Code',
-      skills: ['Terraform', 'Ansible', 'CloudFormation'],
-      icon: <CogIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'Cloud Platforms',
-      skills: ['AWS', 'Azure', 'EC2', 'VPC', 'S3', 'RDS', 'Lambda', 'IAM'],
-      icon: <CloudIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'DevOps Tools',
-      skills: ['Git', 'GitLFS', 'JIRA', 'Docker Registry/ECR', 'Kubernetes'],
+      name: 'Tools',
+      skills: ['Postman', 'JIRA', 'Teleport', 'SonarQube', 'Snyk'],
       icon: <WrenchScrewdriverIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'Monitoring & Observability',
-      skills: ['Prometheus', 'Grafana', 'CloudWatch', 'Datadog'],
-      icon: <ShieldCheckIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'Operating Systems & Scripting',
-      skills: ['Linux', 'Windows', 'Bash', 'PowerShell', 'Python', 'Shell Scripting'],
-      icon: <CommandLineIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'Databases & Storage',
-      skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'S3', 'VectorDB'],
-      icon: <CircleStackIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
-    },
-    {
-      name: 'Healthcare & Medical Tech',
-      skills: ['DICOM', 'DICOM Protocol', 'PACS Integration', 'HIPAA Compliance', 'Medical Imaging', 'HL7'],
-      icon: <ShieldCheckIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />,
     },
   ];
 
@@ -92,31 +82,25 @@ const Skills = () => {
           viewport={{ once: true }}
           className="mb-16 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8"
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Currently Learning</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">Currently Building With</h3>
           <div className="flex flex-wrap gap-3 justify-center">
             <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
-              RAG (Retrieval-Augmented Generation)
+              Model Context Protocol (MCP)
             </span>
             <span className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium">
-              Vector Databases 
-            </span>
-            <span className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium">
-              MCP
+              LLM Agent Orchestration
             </span>
             <span className="px-4 py-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium">
-              LangChain
+              FastAPI
             </span>
             <span className="px-4 py-2 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium">
-              AI/ML Infrastructure & MLOps
+              Supabase
             </span>
             <span className="px-4 py-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 rounded-full text-sm font-medium">
-              Cursor & Claude Code
-            </span>
-            <span className="px-4 py-2 bg-lime-100 dark:bg-lime-900/30 text-lime-700 dark:text-lime-300 rounded-full text-sm font-medium">
-              Make.com
+              Distributed Tracing
             </span>
             <span className="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-medium">
-              LightLLM
+              Locust (Load Testing)
             </span>
           </div>
         </motion.div>
@@ -198,17 +182,17 @@ const Skills = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
-              <DocumentTextIcon className="w-10 h-10 text-blue-600 dark:text-blue-400 mr-4 flex-shrink-0" />
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-gray-100">AZ-900 Azure Fundamentals</h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Microsoft Certified</p>
-              </div>
-            </div>
-            <div className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
               <CloudIcon className="w-10 h-10 text-blue-600 dark:text-blue-400 mr-4 flex-shrink-0" />
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-gray-100">AWS Certified Cloud Practitioner</h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">Amazon Web Services</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Amazon Web Services · Issued Dec 2023 · Expires Dec 2026</p>
+              </div>
+            </div>
+            <div className="flex items-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+              <DocumentTextIcon className="w-10 h-10 text-blue-600 dark:text-blue-400 mr-4 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100">Model Context Protocol</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Anthropic · Issued Mar 2026</p>
               </div>
             </div>
           </div>

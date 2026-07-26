@@ -16,41 +16,57 @@ const Resume = () => {
   const [showAllExperience, setShowAllExperience] = useState(false);
   const experiences = [
     {
+      title: 'Software Development Engineer',
+      company: 'Qure.ai',
+      duration: 'Aug 2025 - Present',
+      role: 'Backend SDE',
+      description: 'Designing and building backend systems for a multi-tenant healthcare platform handling 100K+ daily transactions. Leading API architecture, SSO integration, LLM agent tooling, and production observability.',
+      highlights: [
+        'Designed REST APIs and core architecture for a multi-tenant healthcare platform with PostgreSQL as primary datastore',
+        'Implemented SAML/OIDC-based SSO using Django Allauth with zero-downtime migration via email-based account matching',
+        'Built secure REST APIs with API-key auth and custom rate-limiting middleware supporting 100K+ daily transactions',
+        'Designed and built LLM agents using Model Context Protocol for an AI orchestration microservice',
+        'Load-tested microservices using Locust to validate performance under production-like traffic',
+        'Implemented distributed tracing and monitoring with Datadog and Grafana across production services',
+        'Applied CI/CD practices via Jenkins-based pipelines across deployment workflows'
+      ]
+    },
+    {
       title: 'Site Reliability Engineer',
       company: 'Qure.ai',
-      duration: 'Oct 2024 - Present',
-      role: 'Developer & SRE',
-      description: 'Leading deployment and infrastructure management for healthcare AI products including AutoRECIST, qXR, qCT, and Gateway. Built automated installers reducing deployment time from hours to minutes, achieving 3× productivity boost. Developed Django-based backend features and REST APIs while ensuring 99.99% uptime. Serve as Technical POC for multiple clients with 24/7 support, successfully deploying in regulatory-compliant regions like Vietnam and Dubai. Established comprehensive monitoring using Datadog and Grafana, reducing MTTR by 60%.',
+      duration: 'Oct 2024 - Aug 2025',
+      role: 'SRE & Backend Developer',
+      description: 'Deployed and operated AI radiology products across cloud and on-premise environments. Built internal tooling and data pipelines while ensuring reliability and compliance across international client deployments.',
       highlights: [
-        'Built automated deployment tools reducing TAT from hours to minutes',
-        'Managed healthcare AI infrastructure across AWS cloud and on-premise',
-        'Integrated with hospital PACS using DICOM protocol',
-        'Technical POC providing 24/7 client support'
+        'Deployed qXR across analog systems, AWS Cloud, and on-premise infrastructure — including on-site in India, Vietnam, and Uganda',
+        'Built qInventory, an internal inventory tracking app, using Django, PostgreSQL, Docker, Keycloak, and Nginx',
+        'Built qStat analytics portal with Power BI and Metabase dashboards, migrated users from legacy platform with zero data loss',
+        'Built a PoC real-time data pipeline using Kafka and Debezium for change data capture (CDC)',
+        'Automated configuration management for on-premise systems using Ansible with Teleport for secure remote access'
       ]
     },
     {
-      title: 'Management Trainee',
-      company: 'Rashtriya Chemical and Fertilizers (PSU)',
+      title: 'Information Technology Officer',
+      company: 'Rashtriya Chemicals & Fertilizers Limited',
       duration: 'Jun 2024 - Oct 2024',
-      role: '.NET Developer & DevOps Engineer',
-      description: 'Developed .NET applications and implemented DevOps practices in a government public sector undertaking. Worked on modernizing legacy systems and introducing automation practices.',
+      role: 'Full-Stack Developer',
+      description: 'Built a Receipt Management System integrating payment gateway with SAP FI, automating end-to-end billing workflows across internal services.',
       highlights: [
-        'Developed backend features using .NET framework',
-        'Introduced DevOps practices to traditional workflows',
-        'Collaborated with government stakeholders'
+        'Built full-stack RMS integrating CCAvenue payment gateway with SAP FI, automating billing entry, cancellation, and reconciliation',
+        'Managed RCF on-premise infrastructure and deployed the RMS application on physical data center servers'
       ]
     },
     {
-      title: 'Systems Engineer',
-      company: 'Tata Consultancy Services',
+      title: 'Site Reliability Engineer',
+      company: 'Tata Consultancy Services (Client: Intel)',
       duration: 'Aug 2021 - Jun 2024',
-      role: 'Developer & DevOps Engineer',
-      description: 'Worked on Intel projects including IFF Digital Twin and Intelligent Traffic Management. Created REST APIs using context broker framework and managed Kubernetes deployments. Implemented MQTT and Kafka for real-time data streaming. Used Snyk for vulnerability scanning, addressing critical issues including Log4j. Achieved 99% platform uptime and reduced deployment effort by 30% using Helm automation.',
+      role: 'SRE & Developer',
+      description: 'Maintained Kubernetes infrastructure for Intel Digital Twin and Smart City projects. Addressed security vulnerabilities and built observability tooling.',
       highlights: [
-        'Developed APIs for Digital Twin platform using REST framework',
-        'Managed POD deployments in Kubernetes clusters',
-        'Implemented real-time messaging with MQTT and Kafka',
-        'Improved security posture through automated vulnerability scanning'
+        'Maintained a Kubernetes cluster of 8 microservices across two projects, building Helm charts to standardize releases',
+        'Identified and resolved Log4j vulnerability across 10 Docker images using Snyk; applied Kubernetes security best practices',
+        'Built a Grafana dashboard visualizing real-time inferences from a Flask server in Kubernetes',
+        'Processed LiDAR data using Python (OpenCV, Open3D, NumPy, Point Cloud Library) and trained basic ML models'
       ]
     }
   ];
