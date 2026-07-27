@@ -9,5 +9,16 @@
     "os": "macOS",
     "device": "Desktop",
     "id": "440df0cc-782f-45af-9f36-51e54f67f125"
+  },
+  {
+    "timestamp": "2026-07-27T08:43:35.504Z",
+    "ip": "test-ip-hash",
+    "userAgent": "Test User Agent",
+    "referrer": "test-referrer",
+    "page": "/test",
+    "browser": "Test Browser",
+    "os": "Test OS",
+    "device": "Test Device",
+    "id": "96fb6021-c6d9-4f66-b2c4-b58f475d0e52"
   }
 ]
