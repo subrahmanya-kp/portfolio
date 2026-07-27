@@ -8,8 +8,22 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Subrahmanya K P - Portfolio',
-  description: 'Personal portfolio showcasing my work and skills as a developer.',
+  title: 'Subrahmanya K P — Backend Software Engineer',
+  description: 'Backend Software Engineer with 5 years of experience in API design, system architecture, and PostgreSQL-backed multi-tenant platforms. Currently building LLM agent tooling and backend systems at Qure.ai.',
+  metadataBase: new URL('https://whoissubbu.vercel.app'),
+  openGraph: {
+    title: 'Subrahmanya K P — Backend Software Engineer',
+    description: 'Backend Software Engineer — projects, writing, and what I\'m currently building.',
+    url: 'https://whoissubbu.vercel.app',
+    siteName: 'Subrahmanya K P',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Subrahmanya K P — Backend Software Engineer',
+    description: 'Backend Software Engineer — projects, writing, and what I\'m currently building.',
+    creator: '@subrahmanya11',
+  },
 };
 
 export default function RootLayout({

@@ -4,8 +4,11 @@ import { headers } from 'next/headers';
 
 export async function POST(request: NextRequest) {
   try {
-    // Parse request body
-    const body = await request.json();
+    const text = await request.text();
+    if (!text) {
+      return NextResponse.json({ error: 'Empty request body' }, { status: 400 });
+    }
+    const body = JSON.parse(text);
     const { page, referrer } = body;
     
     if (!page) {
